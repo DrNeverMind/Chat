@@ -51,7 +51,7 @@ io.on('connection', (client) => {
    * uses Redis to get the information of the user.
    */
   client.on('getConversations', (info, callBack) => {
-    redis.smembers(info.user.id, function (err, result) {
+    redis.smembers('testingContacts', function (err, result) {
       callBack(result);
     });
   });

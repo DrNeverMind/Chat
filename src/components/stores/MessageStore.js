@@ -21,8 +21,8 @@ class MessageStore extends EventEmitter {
   }
 
   getConversations(info = null) {
-    info.user.id = 12345;
-    socket.emit('getConversations', info, (contacts) => {
+    // info.user.id = 12345;
+    socket.emit('getConversations', 1234, (contacts) => {
       this.emit('contacts_updated', contacts);
     });
   }

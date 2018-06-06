@@ -27,6 +27,7 @@ class App extends Component {
         });
 
         MessageStore.on('contacts_updated', (info) => {
+
             info.map((item) => {
                 return this.setState((prevState) => ({
                     users: prevState.users.concat(JSON.parse(item))
